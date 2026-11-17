@@ -1,0 +1,113 @@
+2026-11-17 19:46:50 | INFO    | MODO SIMULADO: previsão de chuva lida de amostra local
+2026-11-17 19:46:50 | INFO    | Integração com o MVP ativa: http://localhost:8010 (chave ***cao)
+2026-11-17 19:46:50 | INFO    | Início da execução | canal=simulado | referência=2026-11-17T14:00 | MVP=integrado
+2026-11-17 19:46:50 | INFO    | Boletim CGE lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 19:46:50 | INFO    | Tabela Ouro lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 19:46:50 | INFO    | Leituras de sensor recebidas do MVP: 1
+2026-11-17 19:46:50 | INFO    | Leituras de sensor válidas: 1
+2026-11-17 19:46:50 | INFO    | Pinheiros: ALERTA ATENCAO gravado (chuva prevista 16.5 mm em 3h: atencao; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 19:46:50 | INFO    | Pinheiros: alerta enviado via simulado
+2026-11-17 19:46:50 | INFO    | Pinheiros: alerta #1 publicado no MVP (id 105)
+2026-11-17 19:46:50 | INFO    | Lapa: ALERTA ATENCAO gravado (boletim CGE/Defesa Civil: atencao)
+2026-11-17 19:46:50 | INFO    | Lapa: alerta enviado via simulado
+2026-11-17 19:46:50 | INFO    | Lapa: alerta #2 publicado no MVP (id 106)
+2026-11-17 19:46:50 | INFO    | Penha: ALERTA PERIGO gravado (chuva prevista 36 mm em 3h: perigo; boletim CGE/Defesa Civil: perigo; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 19:46:50 | INFO    | Penha: alerta enviado via simulado
+2026-11-17 19:46:50 | INFO    | Penha: alerta #3 publicado no MVP (id 107)
+2026-11-17 19:46:50 | INFO    | Santo Amaro: normal (chuva 0 mm, origem=simulado), sem alerta
+2026-11-17 19:46:50 | INFO    | Itaim Paulista: normal (chuva 5 mm, origem=simulado), sem alerta
+2026-11-17 19:46:50 | INFO    | Jabaquara: ALERTA PERIGO gravado (sensor de nível de água (robô): perigo)
+2026-11-17 19:46:50 | INFO    | Jabaquara: alerta enviado via simulado
+2026-11-17 19:46:50 | INFO    | Jabaquara: alerta #4 publicado no MVP (id 108)
+2026-11-17 19:46:50 | INFO    | Fim | processados=6 sucessos=6 falhas=0 alertas_novos=4 duplicados=0 enviados=4 pendentes=0 reenviados=0 sem_alerta=2 publicados_mvp=4 publicacao_pendente=0
+2026-11-17 19:46:50 | INFO    | MODO SIMULADO: previsão de chuva lida de amostra local
+2026-11-17 19:46:50 | INFO    | Integração com o MVP ativa: http://localhost:8010 (chave ***cao)
+2026-11-17 19:46:50 | INFO    | Início da execução | canal=simulado | referência=2026-11-17T14:00 | MVP=integrado
+2026-11-17 19:46:50 | INFO    | Boletim CGE lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 19:46:50 | INFO    | Tabela Ouro lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 19:46:50 | INFO    | Leituras de sensor recebidas do MVP: 1
+2026-11-17 19:46:50 | INFO    | Leituras de sensor válidas: 1
+2026-11-17 19:46:50 | INFO    | Pinheiros: alerta atencao já existe para 2026-11-17T14:00, ignorado (duplicado)
+2026-11-17 19:46:50 | INFO    | Lapa: alerta atencao já existe para 2026-11-17T14:00, ignorado (duplicado)
+2026-11-17 19:46:50 | INFO    | Penha: alerta perigo já existe para 2026-11-17T14:00, ignorado (duplicado)
+2026-11-17 19:46:50 | INFO    | Santo Amaro: normal (chuva 0 mm, origem=simulado), sem alerta
+2026-11-17 19:46:50 | INFO    | Itaim Paulista: normal (chuva 5 mm, origem=simulado), sem alerta
+2026-11-17 19:46:50 | INFO    | Jabaquara: alerta perigo já existe para 2026-11-17T14:00, ignorado (duplicado)
+2026-11-17 19:46:50 | INFO    | Fim | processados=6 sucessos=6 falhas=0 alertas_novos=0 duplicados=4 enviados=0 pendentes=0 reenviados=0 sem_alerta=2 publicados_mvp=0 publicacao_pendente=0
+2026-11-17 19:46:50 | INFO    | MODO SIMULADO: previsão de chuva lida de amostra local
+2026-11-17 19:46:50 | INFO    | Integração com o MVP ativa: http://127.0.0.1:9 (chave ***cao)
+2026-11-17 19:46:50 | INFO    | Início da execução | canal=simulado | referência=2026-11-17T14:00 | MVP=integrado
+2026-11-17 19:46:50 | INFO    | Boletim CGE lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 19:46:50 | INFO    | Tabela Ouro lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 19:46:50 | ERROR   | Leituras do MVP indisponíveis: MVP indisponível em /leituras?limite=200 (URLError) (seguindo com as leituras locais)
+2026-11-17 19:46:50 | INFO    | Leituras de sensor válidas: 0
+2026-11-17 19:46:50 | INFO    | Pinheiros: ALERTA ATENCAO gravado (chuva prevista 16.5 mm em 3h: atencao; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 19:46:50 | INFO    | Pinheiros: alerta enviado via simulado
+2026-11-17 19:46:50 | WARNING | publicação MVP #1 falhou (tentativa 1/3): MVP indisponível em /alertas (URLError)
+2026-11-17 19:46:51 | WARNING | publicação MVP #1 falhou (tentativa 2/3): MVP indisponível em /alertas (URLError)
+2026-11-17 19:46:51 | WARNING | publicação MVP #1 falhou (tentativa 3/3): MVP indisponível em /alertas (URLError)
+2026-11-17 19:46:51 | ERROR   | Alerta #1 NÃO publicado no MVP, será republicado na próxima execução: MVP indisponível em /alertas (URLError)
+2026-11-17 19:46:51 | INFO    | Lapa: ALERTA ATENCAO gravado (boletim CGE/Defesa Civil: atencao)
+2026-11-17 19:46:51 | INFO    | Lapa: alerta enviado via simulado
+2026-11-17 19:46:51 | WARNING | publicação MVP #2 falhou (tentativa 1/3): MVP indisponível em /alertas (URLError)
+2026-11-17 19:46:51 | WARNING | publicação MVP #2 falhou (tentativa 2/3): MVP indisponível em /alertas (URLError)
+2026-11-17 19:46:52 | WARNING | publicação MVP #2 falhou (tentativa 3/3): MVP indisponível em /alertas (URLError)
+2026-11-17 19:46:52 | ERROR   | Alerta #2 NÃO publicado no MVP, será republicado na próxima execução: MVP indisponível em /alertas (URLError)
+2026-11-17 19:46:52 | INFO    | Penha: ALERTA PERIGO gravado (chuva prevista 36 mm em 3h: perigo; boletim CGE/Defesa Civil: perigo; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 19:46:52 | INFO    | Penha: alerta enviado via simulado
+2026-11-17 19:46:52 | WARNING | publicação MVP #3 falhou (tentativa 1/3): MVP indisponível em /alertas (URLError)
+2026-11-17 19:46:52 | WARNING | publicação MVP #3 falhou (tentativa 2/3): MVP indisponível em /alertas (URLError)
+2026-11-17 19:46:52 | WARNING | publicação MVP #3 falhou (tentativa 3/3): MVP indisponível em /alertas (URLError)
+2026-11-17 19:46:52 | ERROR   | Alerta #3 NÃO publicado no MVP, será republicado na próxima execução: MVP indisponível em /alertas (URLError)
+2026-11-17 19:46:52 | INFO    | Santo Amaro: normal (chuva 0 mm, origem=simulado), sem alerta
+2026-11-17 19:46:52 | INFO    | Itaim Paulista: normal (chuva 5 mm, origem=simulado), sem alerta
+2026-11-17 19:46:52 | INFO    | Jabaquara: normal (chuva 0.5 mm, origem=simulado), sem alerta
+2026-11-17 19:46:52 | INFO    | Fim | processados=6 sucessos=6 falhas=1 alertas_novos=3 duplicados=0 enviados=3 pendentes=0 reenviados=0 sem_alerta=3 publicados_mvp=0 publicacao_pendente=3
+2026-11-17 19:46:52 | INFO    | MODO SIMULADO: previsão de chuva lida de amostra local
+2026-11-17 19:46:52 | INFO    | Integração com o MVP ativa: http://localhost:8010 (chave ***cao)
+2026-11-17 19:46:52 | INFO    | Início da execução | canal=simulado | referência=2026-11-17T14:00 | MVP=integrado
+2026-11-17 19:46:52 | INFO    | Pinheiros: alerta #1 publicado no MVP (id 105)
+2026-11-17 19:46:52 | INFO    | Lapa: alerta #2 publicado no MVP (id 106)
+2026-11-17 19:46:52 | INFO    | Penha: alerta #3 publicado no MVP (id 107)
+2026-11-17 19:46:52 | INFO    | Boletim CGE lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 19:46:52 | INFO    | Tabela Ouro lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 19:46:52 | INFO    | Leituras de sensor recebidas do MVP: 1
+2026-11-17 19:46:52 | INFO    | Leituras de sensor válidas: 1
+2026-11-17 19:46:52 | INFO    | Pinheiros: alerta atencao já existe para 2026-11-17T14:00, ignorado (duplicado)
+2026-11-17 19:46:52 | INFO    | Lapa: alerta atencao já existe para 2026-11-17T14:00, ignorado (duplicado)
+2026-11-17 19:46:52 | INFO    | Penha: alerta perigo já existe para 2026-11-17T14:00, ignorado (duplicado)
+2026-11-17 19:46:52 | INFO    | Santo Amaro: normal (chuva 0 mm, origem=simulado), sem alerta
+2026-11-17 19:46:52 | INFO    | Itaim Paulista: normal (chuva 5 mm, origem=simulado), sem alerta
+2026-11-17 19:46:52 | INFO    | Jabaquara: ALERTA PERIGO gravado (sensor de nível de água (robô): perigo)
+2026-11-17 19:46:52 | INFO    | Jabaquara: alerta enviado via simulado
+2026-11-17 19:46:52 | INFO    | Jabaquara: alerta #7 publicado no MVP (id 108)
+2026-11-17 19:46:52 | INFO    | Fim | processados=6 sucessos=6 falhas=0 alertas_novos=1 duplicados=3 enviados=1 pendentes=0 reenviados=0 sem_alerta=2 publicados_mvp=4 publicacao_pendente=0
+2026-11-17 19:46:52 | INFO    | MODO SIMULADO: previsão de chuva lida de amostra local
+2026-11-17 19:46:52 | INFO    | Integração com o MVP ativa: http://localhost:8010 (chave ***xyz)
+2026-11-17 19:46:52 | INFO    | Início da execução | canal=simulado | referência=2026-11-17T15:00 | MVP=integrado
+2026-11-17 19:46:52 | INFO    | Boletim CGE lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 19:46:52 | INFO    | Tabela Ouro lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 19:46:52 | INFO    | Leituras de sensor recebidas do MVP: 0
+2026-11-17 19:46:52 | INFO    | Leituras de sensor válidas: 0
+2026-11-17 19:46:52 | INFO    | Pinheiros: ALERTA ATENCAO gravado (risco da tabela Ouro (Big Data): atencao)
+2026-11-17 19:46:52 | INFO    | Pinheiros: alerta enviado via simulado
+2026-11-17 19:46:52 | WARNING | publicação MVP #1 falhou (tentativa 1/3): MVP respondeu HTTP 401 em /alertas
+2026-11-17 19:46:52 | WARNING | publicação MVP #1 falhou (tentativa 2/3): MVP respondeu HTTP 401 em /alertas
+2026-11-17 19:46:52 | WARNING | publicação MVP #1 falhou (tentativa 3/3): MVP respondeu HTTP 401 em /alertas
+2026-11-17 19:46:52 | ERROR   | Alerta #1 NÃO publicado no MVP, será republicado na próxima execução: MVP respondeu HTTP 401 em /alertas
+2026-11-17 19:46:52 | INFO    | Lapa: ALERTA ATENCAO gravado (boletim CGE/Defesa Civil: atencao)
+2026-11-17 19:46:52 | INFO    | Lapa: alerta enviado via simulado
+2026-11-17 19:46:52 | WARNING | publicação MVP #2 falhou (tentativa 1/3): MVP respondeu HTTP 401 em /alertas
+2026-11-17 19:46:52 | WARNING | publicação MVP #2 falhou (tentativa 2/3): MVP respondeu HTTP 401 em /alertas
+2026-11-17 19:46:52 | WARNING | publicação MVP #2 falhou (tentativa 3/3): MVP respondeu HTTP 401 em /alertas
+2026-11-17 19:46:52 | ERROR   | Alerta #2 NÃO publicado no MVP, será republicado na próxima execução: MVP respondeu HTTP 401 em /alertas
+2026-11-17 19:46:52 | INFO    | Penha: ALERTA PERIGO gravado (chuva prevista 24.0 mm em 3h: atencao; boletim CGE/Defesa Civil: perigo; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 19:46:52 | INFO    | Penha: alerta enviado via simulado
+2026-11-17 19:46:52 | WARNING | publicação MVP #3 falhou (tentativa 1/3): MVP respondeu HTTP 401 em /alertas
+2026-11-17 19:46:52 | WARNING | publicação MVP #3 falhou (tentativa 2/3): MVP respondeu HTTP 401 em /alertas
+2026-11-17 19:46:52 | WARNING | publicação MVP #3 falhou (tentativa 3/3): MVP respondeu HTTP 401 em /alertas
+2026-11-17 19:46:52 | ERROR   | Alerta #3 NÃO publicado no MVP, será republicado na próxima execução: MVP respondeu HTTP 401 em /alertas
+2026-11-17 19:46:52 | INFO    | Santo Amaro: normal (chuva 0.0 mm, origem=simulado), sem alerta
+2026-11-17 19:46:52 | INFO    | Itaim Paulista: normal (chuva 3.0 mm, origem=simulado), sem alerta
+2026-11-17 19:46:52 | INFO    | Jabaquara: normal (chuva 0.0 mm, origem=simulado), sem alerta
+2026-11-17 19:46:52 | INFO    | Fim | processados=6 sucessos=6 falhas=0 alertas_novos=3 duplicados=0 enviados=3 pendentes=0 reenviados=0 sem_alerta=3 publicados_mvp=0 publicacao_pendente=3

@@ -1,0 +1,40 @@
+$ python run.py --agora 2026-11-17T14:30 --open-meteo-url http://127.0.0.1:9/   # API fora, mas ha cache de 30 min
+2026-11-17 21:36:47 | INFO    | Início da execução | canal=simulado | referência=2026-11-17T14:00
+2026-11-17 21:36:47 | INFO    | Boletim CGE lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 21:36:47 | INFO    | Tabela Ouro lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 21:36:47 | INFO    | Leituras de sensor válidas: 0
+2026-11-17 21:36:47 | WARNING | chuva Pinheiros falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:47 | WARNING | chuva Pinheiros falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:47 | WARNING | chuva Pinheiros falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:47 | WARNING | Usando cache de chuva para Pinheiros (30 min de idade)
+2026-11-17 21:36:47 | INFO    | Pinheiros: ALERTA ATENCAO gravado (chuva prevista 16.5 mm em 3h: atencao; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 21:36:47 | INFO    | Pinheiros: alerta enviado via simulado
+2026-11-17 21:36:47 | WARNING | chuva Lapa falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:47 | WARNING | chuva Lapa falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:48 | WARNING | chuva Lapa falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:48 | WARNING | Usando cache de chuva para Lapa (30 min de idade)
+2026-11-17 21:36:48 | INFO    | Lapa: ALERTA ATENCAO gravado (boletim CGE/Defesa Civil: atencao)
+2026-11-17 21:36:48 | INFO    | Lapa: alerta enviado via simulado
+2026-11-17 21:36:48 | WARNING | chuva Penha falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:48 | WARNING | chuva Penha falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:48 | WARNING | chuva Penha falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:48 | WARNING | Usando cache de chuva para Penha (30 min de idade)
+2026-11-17 21:36:48 | INFO    | Penha: ALERTA PERIGO gravado (chuva prevista 36.0 mm em 3h: perigo; boletim CGE/Defesa Civil: perigo; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 21:36:48 | INFO    | Penha: alerta enviado via simulado
+2026-11-17 21:36:48 | WARNING | chuva Santo Amaro falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:49 | WARNING | chuva Santo Amaro falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:49 | WARNING | chuva Santo Amaro falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:49 | WARNING | Usando cache de chuva para Santo Amaro (30 min de idade)
+2026-11-17 21:36:49 | INFO    | Santo Amaro: normal (chuva 0.0 mm, origem=cache), sem alerta
+2026-11-17 21:36:49 | WARNING | chuva Itaim Paulista falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:49 | WARNING | chuva Itaim Paulista falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:50 | WARNING | chuva Itaim Paulista falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:50 | WARNING | Usando cache de chuva para Itaim Paulista (30 min de idade)
+2026-11-17 21:36:50 | INFO    | Itaim Paulista: normal (chuva 5.0 mm, origem=cache), sem alerta
+2026-11-17 21:36:50 | WARNING | chuva Jabaquara falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:50 | WARNING | chuva Jabaquara falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:50 | WARNING | chuva Jabaquara falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:50 | WARNING | Usando cache de chuva para Jabaquara (30 min de idade)
+2026-11-17 21:36:50 | INFO    | Jabaquara: normal (chuva 0.5 mm, origem=cache), sem alerta
+2026-11-17 21:36:50 | INFO    | Fim | processados=6 sucessos=6 falhas=0 alertas_novos=3 duplicados=0 enviados=3 pendentes=0 reenviados=0 sem_alerta=3
+[codigo de saida: 0]

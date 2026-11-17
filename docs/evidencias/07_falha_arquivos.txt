@@ -1,0 +1,16 @@
+$ python run.py --simulado --agora 2026-11-17T14:00 --boletim amostras/boletim_cge_invalido.csv --ouro amostras/nao_existe.csv
+2026-11-17 21:36:50 | INFO    | MODO SIMULADO: previsão de chuva lida de amostra local
+2026-11-17 21:36:50 | INFO    | Início da execução | canal=simulado | referência=2026-11-17T14:00
+2026-11-17 21:36:50 | ERROR   | Boletim CGE inválido: boletim_cge_invalido.csv: cabeçalho deve conter ['bairro', 'data_hora', 'estado']: seguindo sem essa fonte
+2026-11-17 21:36:50 | WARNING | Tabela Ouro ausente (nao_existe.csv): seguindo sem essa fonte
+2026-11-17 21:36:50 | INFO    | Leituras de sensor válidas: 0
+2026-11-17 21:36:50 | INFO    | Pinheiros: ALERTA ATENCAO gravado (chuva prevista 16.5 mm em 3h: atencao)
+2026-11-17 21:36:50 | INFO    | Pinheiros: alerta enviado via simulado
+2026-11-17 21:36:50 | INFO    | Lapa: normal (chuva 1.5 mm, origem=simulado), sem alerta
+2026-11-17 21:36:50 | INFO    | Penha: ALERTA PERIGO gravado (chuva prevista 36 mm em 3h: perigo)
+2026-11-17 21:36:50 | INFO    | Penha: alerta enviado via simulado
+2026-11-17 21:36:50 | INFO    | Santo Amaro: normal (chuva 0 mm, origem=simulado), sem alerta
+2026-11-17 21:36:50 | INFO    | Itaim Paulista: normal (chuva 5 mm, origem=simulado), sem alerta
+2026-11-17 21:36:50 | INFO    | Jabaquara: normal (chuva 0.5 mm, origem=simulado), sem alerta
+2026-11-17 21:36:50 | INFO    | Fim | processados=6 sucessos=6 falhas=2 alertas_novos=2 duplicados=0 enviados=2 pendentes=0 reenviados=0 sem_alerta=4
+[codigo de saida: 2]

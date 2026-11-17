@@ -1,0 +1,2 @@
+# O robô usa SOMENTE a biblioteca padrão do Python 3.10+ (urllib, sqlite3, csv, logging, unittest).
+# Nada a instalar.

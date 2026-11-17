@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_AlagaRPA" targetNamespace="http://alagaalerta.example/bpmn">
+  <bpmn:process id="Process_AlagaRPA" name="Alaga Alerta - Robo de monitoramento e alerta" isExecutable="false">
+    <bpmn:startEvent id="Id_start" name="Agendador (a cada 30 min)"><bpmn:outgoing>Flow_1</bpmn:outgoing></bpmn:startEvent>
+    <bpmn:task id="Id_carregar" name="Carregar config e abrir log"><bpmn:incoming>Flow_1</bpmn:incoming><bpmn:outgoing>Flow_2</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="Id_reenviar" name="Reenviar pendentes (Telegram e MVP)"><bpmn:incoming>Flow_2</bpmn:incoming><bpmn:outgoing>Flow_3</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="Id_entradas" name="Ler boletim CGE, Ouro e sensor"><bpmn:incoming>Flow_3</bpmn:incoming><bpmn:outgoing>Flow_4</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="Id_chuva" name="Para cada bairro: consultar chuva (Open-Meteo)"><bpmn:incoming>Flow_4</bpmn:incoming><bpmn:outgoing>Flow_5</bpmn:outgoing><bpmn:multiInstanceLoopCharacteristics isSequential="true" /></bpmn:task>
+    <bpmn:exclusiveGateway id="Id_gwApi" name="API respondeu?"><bpmn:incoming>Flow_5</bpmn:incoming><bpmn:outgoing>Flow_6</bpmn:outgoing><bpmn:outgoing>Flow_7</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:task id="Id_fallback" name="Usar cache ou registrar falha"><bpmn:incoming>Flow_7</bpmn:incoming><bpmn:outgoing>Flow_8</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="Id_calcular" name="Decidir risco (maior das fontes)"><bpmn:incoming>Flow_6</bpmn:incoming><bpmn:incoming>Flow_8</bpmn:incoming><bpmn:outgoing>Flow_9</bpmn:outgoing></bpmn:task>
+    <bpmn:exclusiveGateway id="Id_gwRisco" name="Risco acima de normal?"><bpmn:incoming>Flow_9</bpmn:incoming><bpmn:outgoing>Flow_10</bpmn:outgoing><bpmn:outgoing>Flow_11</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:task id="Id_semAlerta" name="Registrar 'sem alerta'"><bpmn:incoming>Flow_11</bpmn:incoming><bpmn:outgoing>Flow_19</bpmn:outgoing></bpmn:task>
+    <bpmn:exclusiveGateway id="Id_gwDup" name="Alerta já existe?"><bpmn:incoming>Flow_10</bpmn:incoming><bpmn:outgoing>Flow_12</bpmn:outgoing><bpmn:outgoing>Flow_13</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:task id="Id_ignorar" name="Ignorar duplicado"><bpmn:incoming>Flow_13</bpmn:incoming><bpmn:outgoing>Flow_20</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="Id_gravar" name="Gravar alerta e publicar no MVP (POST /alertas)"><bpmn:incoming>Flow_12</bpmn:incoming><bpmn:outgoing>Flow_14</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="Id_disparar" name="Enviar alerta (Telegram)"><bpmn:incoming>Flow_14</bpmn:incoming><bpmn:outgoing>Flow_15</bpmn:outgoing></bpmn:task>
+    <bpmn:exclusiveGateway id="Id_gwEnvio" name="Envio ok?"><bpmn:incoming>Flow_15</bpmn:incoming><bpmn:outgoing>Flow_16</bpmn:outgoing><bpmn:outgoing>Flow_17</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:task id="Id_falhaEnvio" name="Marcar pendente e logar erro"><bpmn:incoming>Flow_17</bpmn:incoming><bpmn:outgoing>Flow_18</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="Id_resumo" name="Gravar auditoria e resumo no log"><bpmn:incoming>Flow_16</bpmn:incoming><bpmn:incoming>Flow_18</bpmn:incoming><bpmn:incoming>Flow_19</bpmn:incoming><bpmn:incoming>Flow_20</bpmn:incoming><bpmn:outgoing>Flow_21</bpmn:outgoing></bpmn:task>
+    <bpmn:endEvent id="Id_end" name="Fim"><bpmn:incoming>Flow_21</bpmn:incoming></bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="Id_start" targetRef="Id_carregar" />
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Id_carregar" targetRef="Id_reenviar" />
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Id_reenviar" targetRef="Id_entradas" />
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Id_entradas" targetRef="Id_chuva" />
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Id_chuva" targetRef="Id_gwApi" />
+    <bpmn:sequenceFlow id="Flow_6" name="sim" sourceRef="Id_gwApi" targetRef="Id_calcular" />
+    <bpmn:sequenceFlow id="Flow_7" name="não" sourceRef="Id_gwApi" targetRef="Id_fallback" />
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Id_fallback" targetRef="Id_calcular" />
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Id_calcular" targetRef="Id_gwRisco" />
+    <bpmn:sequenceFlow id="Flow_10" name="sim" sourceRef="Id_gwRisco" targetRef="Id_gwDup" />
+    <bpmn:sequenceFlow id="Flow_11" name="não" sourceRef="Id_gwRisco" targetRef="Id_semAlerta" />
+    <bpmn:sequenceFlow id="Flow_12" name="não" sourceRef="Id_gwDup" targetRef="Id_gravar" />
+    <bpmn:sequenceFlow id="Flow_13" name="sim" sourceRef="Id_gwDup" targetRef="Id_ignorar" />
+    <bpmn:sequenceFlow id="Flow_14" sourceRef="Id_gravar" targetRef="Id_disparar" />
+    <bpmn:sequenceFlow id="Flow_15" sourceRef="Id_disparar" targetRef="Id_gwEnvio" />
+    <bpmn:sequenceFlow id="Flow_16" name="sim" sourceRef="Id_gwEnvio" targetRef="Id_resumo" />
+    <bpmn:sequenceFlow id="Flow_17" name="não" sourceRef="Id_gwEnvio" targetRef="Id_falhaEnvio" />
+    <bpmn:sequenceFlow id="Flow_18" sourceRef="Id_falhaEnvio" targetRef="Id_resumo" />
+    <bpmn:sequenceFlow id="Flow_19" sourceRef="Id_semAlerta" targetRef="Id_resumo" />
+    <bpmn:sequenceFlow id="Flow_20" sourceRef="Id_ignorar" targetRef="Id_resumo" />
+    <bpmn:sequenceFlow id="Flow_21" sourceRef="Id_resumo" targetRef="Id_end" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_1">
+    <bpmndi:BPMNPlane id="Plane_1" bpmnElement="Process_AlagaRPA">
+      <bpmndi:BPMNShape id="Id_start_di" bpmnElement="Id_start"><dc:Bounds x="91" y="281" width="38" height="38" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Id_carregar_di" bpmnElement="Id_carregar"><dc:Bounds x="225" y="263" width="150" height="74" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Id_reenviar_di" bpmnElement="Id_reenviar"><dc:Bounds x="415" y="263" width="150" height="74" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Id_entradas_di" bpmnElement="Id_entradas"><dc:Bounds x="605" y="263" width="150" height="74" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Id_chuva_di" bpmnElement="Id_chuva"><dc:Bounds x="795" y="263" width="150" height="74" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Id_gwApi_di" bpmnElement="Id_gwApi" isMarkerVisible="true"><dc:Bounds x="1033" y="273" width="54" height="54" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Id_fallback_di" bpmnElement="Id_fallback"><dc:Bounds x="985" y="113" width="150" height="74" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Id_calcular_di" bpmnElement="Id_calcular"><dc:Bounds x="1175" y="263" width="150" height="74" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Id_gwRisco_di" bpmnElement="Id_gwRisco" isMarkerVisible="true"><dc:Bounds x="83" y="423" width="54" height="54" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Id_semAlerta_di" bpmnElement="Id_semAlerta"><dc:Bounds x="35" y="563" width="150" height="74" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Id_gwDup_di" bpmnElement="Id_gwDup" isMarkerVisible="true"><dc:Bounds x="273" y="423" width="54" height="54" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Id_ignorar_di" bpmnElement="Id_ignorar"><dc:Bounds x="225" y="563" width="150" height="74" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Id_gravar_di" bpmnElement="Id_gravar"><dc:Bounds x="415" y="413" width="150" height="74" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Id_disparar_di" bpmnElement="Id_disparar"><dc:Bounds x="605" y="413" width="150" height="74" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Id_gwEnvio_di" bpmnElement="Id_gwEnvio" isMarkerVisible="true"><dc:Bounds x="843" y="423" width="54" height="54" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Id_falhaEnvio_di" bpmnElement="Id_falhaEnvio"><dc:Bounds x="795" y="563" width="150" height="74" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Id_resumo_di" bpmnElement="Id_resumo"><dc:Bounds x="985" y="413" width="150" height="74" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Id_end_di" bpmnElement="Id_end"><dc:Bounds x="1231" y="431" width="38" height="38" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1"><di:waypoint x="129" y="300" /><di:waypoint x="225" y="300" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2"><di:waypoint x="375" y="300" /><di:waypoint x="415" y="300" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3"><di:waypoint x="565" y="300" /><di:waypoint x="605" y="300" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4"><di:waypoint x="755" y="300" /><di:waypoint x="795" y="300" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_5_di" bpmnElement="Flow_5"><di:waypoint x="945" y="300" /><di:waypoint x="1033" y="300" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_6_di" bpmnElement="Flow_6"><di:waypoint x="1087" y="300" /><di:waypoint x="1175" y="300" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_7_di" bpmnElement="Flow_7"><di:waypoint x="1060" y="273" /><di:waypoint x="1060" y="187" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_8_di" bpmnElement="Flow_8"><di:waypoint x="1135" y="150" /><di:waypoint x="1250" y="150" /><di:waypoint x="1250" y="263" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_9_di" bpmnElement="Flow_9"><di:waypoint x="1250" y="337" /><di:waypoint x="1250" y="375" /><di:waypoint x="110" y="375" /><di:waypoint x="110" y="423" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10_di" bpmnElement="Flow_10"><di:waypoint x="137" y="450" /><di:waypoint x="273" y="450" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_11_di" bpmnElement="Flow_11"><di:waypoint x="110" y="477" /><di:waypoint x="110" y="563" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12_di" bpmnElement="Flow_12"><di:waypoint x="327" y="450" /><di:waypoint x="415" y="450" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13_di" bpmnElement="Flow_13"><di:waypoint x="300" y="477" /><di:waypoint x="300" y="563" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_14_di" bpmnElement="Flow_14"><di:waypoint x="565" y="450" /><di:waypoint x="605" y="450" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_15_di" bpmnElement="Flow_15"><di:waypoint x="755" y="450" /><di:waypoint x="843" y="450" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_16_di" bpmnElement="Flow_16"><di:waypoint x="897" y="450" /><di:waypoint x="985" y="450" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_17_di" bpmnElement="Flow_17"><di:waypoint x="870" y="477" /><di:waypoint x="870" y="563" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_18_di" bpmnElement="Flow_18"><di:waypoint x="945" y="600" /><di:waypoint x="1060" y="600" /><di:waypoint x="1060" y="487" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_19_di" bpmnElement="Flow_19"><di:waypoint x="110" y="637" /><di:waypoint x="110" y="679" /><di:waypoint x="1060" y="679" /><di:waypoint x="1060" y="487" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_20_di" bpmnElement="Flow_20"><di:waypoint x="300" y="637" /><di:waypoint x="300" y="659" /><di:waypoint x="1060" y="659" /><di:waypoint x="1060" y="487" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_21_di" bpmnElement="Flow_21"><di:waypoint x="1135" y="450" /><di:waypoint x="1231" y="450" /></bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

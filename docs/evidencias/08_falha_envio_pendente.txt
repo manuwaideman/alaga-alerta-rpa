@@ -1,0 +1,32 @@
+$ TELEGRAM_BOT_TOKEN=*** TELEGRAM_CHAT_ID=*** python run.py --simulado --agora 2026-11-17T14:00   # Telegram inacessivel
+2026-11-17 21:36:50 | INFO    | MODO SIMULADO: previsão de chuva lida de amostra local
+2026-11-17 21:36:50 | INFO    | Início da execução | canal=telegram | referência=2026-11-17T14:00
+2026-11-17 21:36:50 | INFO    | Telegram configurado (chat ***321)
+2026-11-17 21:36:50 | INFO    | Boletim CGE lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 21:36:50 | INFO    | Tabela Ouro lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 21:36:50 | INFO    | Leituras de sensor válidas: 0
+2026-11-17 21:36:50 | INFO    | Pinheiros: ALERTA ATENCAO gravado (chuva prevista 16.5 mm em 3h: atencao; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 21:36:50 | WARNING | envio alerta #1 falhou (tentativa 1/3): Telegram indisponível (URLError)
+2026-11-17 21:36:51 | WARNING | envio alerta #1 falhou (tentativa 2/3): Telegram indisponível (URLError)
+2026-11-17 21:36:51 | WARNING | envio alerta #1 falhou (tentativa 3/3): Telegram indisponível (URLError)
+2026-11-17 21:36:51 | ERROR   | Alerta #1 NÃO enviado, ficou pendente para a próxima execução: Telegram indisponível (URLError)
+2026-11-17 21:36:51 | INFO    | Lapa: ALERTA ATENCAO gravado (boletim CGE/Defesa Civil: atencao)
+2026-11-17 21:36:51 | WARNING | envio alerta #2 falhou (tentativa 1/3): Telegram indisponível (URLError)
+2026-11-17 21:36:51 | WARNING | envio alerta #2 falhou (tentativa 2/3): Telegram indisponível (URLError)
+2026-11-17 21:36:52 | WARNING | envio alerta #2 falhou (tentativa 3/3): Telegram indisponível (URLError)
+2026-11-17 21:36:52 | ERROR   | Alerta #2 NÃO enviado, ficou pendente para a próxima execução: Telegram indisponível (URLError)
+2026-11-17 21:36:52 | INFO    | Penha: ALERTA PERIGO gravado (chuva prevista 36 mm em 3h: perigo; boletim CGE/Defesa Civil: perigo; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 21:36:52 | WARNING | envio alerta #3 falhou (tentativa 1/3): Telegram indisponível (URLError)
+2026-11-17 21:36:52 | WARNING | envio alerta #3 falhou (tentativa 2/3): Telegram indisponível (URLError)
+2026-11-17 21:36:52 | WARNING | envio alerta #3 falhou (tentativa 3/3): Telegram indisponível (URLError)
+2026-11-17 21:36:52 | ERROR   | Alerta #3 NÃO enviado, ficou pendente para a próxima execução: Telegram indisponível (URLError)
+2026-11-17 21:36:52 | INFO    | Santo Amaro: normal (chuva 0 mm, origem=simulado), sem alerta
+2026-11-17 21:36:52 | INFO    | Itaim Paulista: normal (chuva 5 mm, origem=simulado), sem alerta
+2026-11-17 21:36:52 | INFO    | Jabaquara: normal (chuva 0.5 mm, origem=simulado), sem alerta
+2026-11-17 21:36:52 | INFO    | Fim | processados=6 sucessos=6 falhas=0 alertas_novos=3 duplicados=0 enviados=0 pendentes=3 reenviados=0 sem_alerta=3
+[codigo de saida: 2]
+
+$ sqlite3 data/falha4.db "SELECT bairro, nivel, status_envio, tentativas FROM alertas"
+Pinheiros | atencao | pendente | 1
+Lapa | atencao | pendente | 1
+Penha | perigo | pendente | 1

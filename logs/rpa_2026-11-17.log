@@ -1,0 +1,143 @@
+2026-11-17 21:36:43 | INFO    | MODO SIMULADO: previsão de chuva lida de amostra local
+2026-11-17 21:36:43 | INFO    | Início da execução | canal=simulado | referência=2026-11-17T14:00
+2026-11-17 21:36:43 | INFO    | Boletim CGE lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 21:36:43 | INFO    | Tabela Ouro lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 21:36:43 | INFO    | Leituras de sensor válidas: 1
+2026-11-17 21:36:43 | INFO    | Pinheiros: ALERTA ATENCAO gravado (chuva prevista 16.5 mm em 3h: atencao; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 21:36:43 | INFO    | Pinheiros: alerta enviado via simulado
+2026-11-17 21:36:43 | INFO    | Lapa: ALERTA ATENCAO gravado (boletim CGE/Defesa Civil: atencao)
+2026-11-17 21:36:43 | INFO    | Lapa: alerta enviado via simulado
+2026-11-17 21:36:43 | INFO    | Penha: ALERTA PERIGO gravado (chuva prevista 36 mm em 3h: perigo; boletim CGE/Defesa Civil: perigo; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 21:36:43 | INFO    | Penha: alerta enviado via simulado
+2026-11-17 21:36:43 | INFO    | Santo Amaro: normal (chuva 0 mm, origem=simulado), sem alerta
+2026-11-17 21:36:43 | INFO    | Itaim Paulista: normal (chuva 5 mm, origem=simulado), sem alerta
+2026-11-17 21:36:43 | INFO    | Jabaquara: ALERTA PERIGO gravado (sensor de nível de água (robô): perigo)
+2026-11-17 21:36:43 | INFO    | Jabaquara: alerta enviado via simulado
+2026-11-17 21:36:43 | INFO    | Fim | processados=6 sucessos=6 falhas=0 alertas_novos=4 duplicados=0 enviados=4 pendentes=0 reenviados=0 sem_alerta=2
+2026-11-17 21:36:43 | INFO    | MODO SIMULADO: previsão de chuva lida de amostra local
+2026-11-17 21:36:43 | INFO    | Início da execução | canal=simulado | referência=2026-11-17T14:00
+2026-11-17 21:36:43 | INFO    | Boletim CGE lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 21:36:43 | INFO    | Tabela Ouro lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 21:36:43 | INFO    | Leituras de sensor válidas: 1
+2026-11-17 21:36:43 | INFO    | Pinheiros: alerta atencao já existe para 2026-11-17T14:00, ignorado (duplicado)
+2026-11-17 21:36:43 | INFO    | Lapa: alerta atencao já existe para 2026-11-17T14:00, ignorado (duplicado)
+2026-11-17 21:36:43 | INFO    | Penha: alerta perigo já existe para 2026-11-17T14:00, ignorado (duplicado)
+2026-11-17 21:36:43 | INFO    | Santo Amaro: normal (chuva 0 mm, origem=simulado), sem alerta
+2026-11-17 21:36:43 | INFO    | Itaim Paulista: normal (chuva 5 mm, origem=simulado), sem alerta
+2026-11-17 21:36:43 | INFO    | Jabaquara: alerta perigo já existe para 2026-11-17T14:00, ignorado (duplicado)
+2026-11-17 21:36:43 | INFO    | Fim | processados=6 sucessos=6 falhas=0 alertas_novos=0 duplicados=4 enviados=0 pendentes=0 reenviados=0 sem_alerta=2
+2026-11-17 21:36:43 | INFO    | Início da execução | canal=simulado | referência=2026-11-17T14:00
+2026-11-17 21:36:43 | INFO    | Boletim CGE lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 21:36:43 | INFO    | Tabela Ouro lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 21:36:43 | INFO    | Leituras de sensor válidas: 0
+2026-11-17 21:36:43 | WARNING | chuva Pinheiros falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:43 | WARNING | chuva Pinheiros falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:43 | WARNING | chuva Pinheiros falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:43 | ERROR   | Falha na chuva de Pinheiros: sem dados de chuva para Pinheiros: Open-Meteo indisponível (URLError) (decidindo só com as outras fontes)
+2026-11-17 21:36:43 | INFO    | Pinheiros: ALERTA ATENCAO gravado (risco da tabela Ouro (Big Data): atencao)
+2026-11-17 21:36:43 | INFO    | Pinheiros: alerta enviado via simulado
+2026-11-17 21:36:43 | WARNING | chuva Lapa falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:44 | WARNING | chuva Lapa falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:44 | WARNING | chuva Lapa falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:44 | ERROR   | Falha na chuva de Lapa: sem dados de chuva para Lapa: Open-Meteo indisponível (URLError) (decidindo só com as outras fontes)
+2026-11-17 21:36:44 | INFO    | Lapa: ALERTA ATENCAO gravado (boletim CGE/Defesa Civil: atencao)
+2026-11-17 21:36:44 | INFO    | Lapa: alerta enviado via simulado
+2026-11-17 21:36:44 | WARNING | chuva Penha falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:44 | WARNING | chuva Penha falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:45 | WARNING | chuva Penha falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:45 | ERROR   | Falha na chuva de Penha: sem dados de chuva para Penha: Open-Meteo indisponível (URLError) (decidindo só com as outras fontes)
+2026-11-17 21:36:45 | INFO    | Penha: ALERTA PERIGO gravado (boletim CGE/Defesa Civil: perigo; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 21:36:45 | INFO    | Penha: alerta enviado via simulado
+2026-11-17 21:36:45 | WARNING | chuva Santo Amaro falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:45 | WARNING | chuva Santo Amaro falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:45 | WARNING | chuva Santo Amaro falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:45 | ERROR   | Falha na chuva de Santo Amaro: sem dados de chuva para Santo Amaro: Open-Meteo indisponível (URLError) (decidindo só com as outras fontes)
+2026-11-17 21:36:45 | INFO    | Santo Amaro: normal (chuva n/d, origem=indisponivel), sem alerta
+2026-11-17 21:36:45 | WARNING | chuva Itaim Paulista falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:46 | WARNING | chuva Itaim Paulista falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:46 | WARNING | chuva Itaim Paulista falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:46 | ERROR   | Falha na chuva de Itaim Paulista: sem dados de chuva para Itaim Paulista: Open-Meteo indisponível (URLError) (decidindo só com as outras fontes)
+2026-11-17 21:36:46 | INFO    | Itaim Paulista: normal (chuva n/d, origem=indisponivel), sem alerta
+2026-11-17 21:36:46 | WARNING | chuva Jabaquara falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:46 | WARNING | chuva Jabaquara falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:47 | WARNING | chuva Jabaquara falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:47 | ERROR   | Falha na chuva de Jabaquara: sem dados de chuva para Jabaquara: Open-Meteo indisponível (URLError) (decidindo só com as outras fontes)
+2026-11-17 21:36:47 | INFO    | Jabaquara: normal (chuva n/d, origem=indisponivel), sem alerta
+2026-11-17 21:36:47 | INFO    | Fim | processados=6 sucessos=0 falhas=6 alertas_novos=3 duplicados=0 enviados=3 pendentes=0 reenviados=0 sem_alerta=3
+2026-11-17 21:36:47 | INFO    | Início da execução | canal=simulado | referência=2026-11-17T14:00
+2026-11-17 21:36:47 | INFO    | Boletim CGE lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 21:36:47 | INFO    | Tabela Ouro lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 21:36:47 | INFO    | Leituras de sensor válidas: 0
+2026-11-17 21:36:47 | WARNING | chuva Pinheiros falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:47 | WARNING | chuva Pinheiros falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:47 | WARNING | chuva Pinheiros falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:47 | WARNING | Usando cache de chuva para Pinheiros (30 min de idade)
+2026-11-17 21:36:47 | INFO    | Pinheiros: ALERTA ATENCAO gravado (chuva prevista 16.5 mm em 3h: atencao; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 21:36:47 | INFO    | Pinheiros: alerta enviado via simulado
+2026-11-17 21:36:47 | WARNING | chuva Lapa falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:47 | WARNING | chuva Lapa falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:48 | WARNING | chuva Lapa falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:48 | WARNING | Usando cache de chuva para Lapa (30 min de idade)
+2026-11-17 21:36:48 | INFO    | Lapa: ALERTA ATENCAO gravado (boletim CGE/Defesa Civil: atencao)
+2026-11-17 21:36:48 | INFO    | Lapa: alerta enviado via simulado
+2026-11-17 21:36:48 | WARNING | chuva Penha falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:48 | WARNING | chuva Penha falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:48 | WARNING | chuva Penha falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:48 | WARNING | Usando cache de chuva para Penha (30 min de idade)
+2026-11-17 21:36:48 | INFO    | Penha: ALERTA PERIGO gravado (chuva prevista 36.0 mm em 3h: perigo; boletim CGE/Defesa Civil: perigo; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 21:36:48 | INFO    | Penha: alerta enviado via simulado
+2026-11-17 21:36:48 | WARNING | chuva Santo Amaro falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:49 | WARNING | chuva Santo Amaro falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:49 | WARNING | chuva Santo Amaro falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:49 | WARNING | Usando cache de chuva para Santo Amaro (30 min de idade)
+2026-11-17 21:36:49 | INFO    | Santo Amaro: normal (chuva 0.0 mm, origem=cache), sem alerta
+2026-11-17 21:36:49 | WARNING | chuva Itaim Paulista falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:49 | WARNING | chuva Itaim Paulista falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:50 | WARNING | chuva Itaim Paulista falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:50 | WARNING | Usando cache de chuva para Itaim Paulista (30 min de idade)
+2026-11-17 21:36:50 | INFO    | Itaim Paulista: normal (chuva 5.0 mm, origem=cache), sem alerta
+2026-11-17 21:36:50 | WARNING | chuva Jabaquara falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:50 | WARNING | chuva Jabaquara falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:50 | WARNING | chuva Jabaquara falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:50 | WARNING | Usando cache de chuva para Jabaquara (30 min de idade)
+2026-11-17 21:36:50 | INFO    | Jabaquara: normal (chuva 0.5 mm, origem=cache), sem alerta
+2026-11-17 21:36:50 | INFO    | Fim | processados=6 sucessos=6 falhas=0 alertas_novos=3 duplicados=0 enviados=3 pendentes=0 reenviados=0 sem_alerta=3
+2026-11-17 21:36:50 | INFO    | MODO SIMULADO: previsão de chuva lida de amostra local
+2026-11-17 21:36:50 | INFO    | Início da execução | canal=simulado | referência=2026-11-17T14:00
+2026-11-17 21:36:50 | ERROR   | Boletim CGE inválido: boletim_cge_invalido.csv: cabeçalho deve conter ['bairro', 'data_hora', 'estado']: seguindo sem essa fonte
+2026-11-17 21:36:50 | WARNING | Tabela Ouro ausente (nao_existe.csv): seguindo sem essa fonte
+2026-11-17 21:36:50 | INFO    | Leituras de sensor válidas: 0
+2026-11-17 21:36:50 | INFO    | Pinheiros: ALERTA ATENCAO gravado (chuva prevista 16.5 mm em 3h: atencao)
+2026-11-17 21:36:50 | INFO    | Pinheiros: alerta enviado via simulado
+2026-11-17 21:36:50 | INFO    | Lapa: normal (chuva 1.5 mm, origem=simulado), sem alerta
+2026-11-17 21:36:50 | INFO    | Penha: ALERTA PERIGO gravado (chuva prevista 36 mm em 3h: perigo)
+2026-11-17 21:36:50 | INFO    | Penha: alerta enviado via simulado
+2026-11-17 21:36:50 | INFO    | Santo Amaro: normal (chuva 0 mm, origem=simulado), sem alerta
+2026-11-17 21:36:50 | INFO    | Itaim Paulista: normal (chuva 5 mm, origem=simulado), sem alerta
+2026-11-17 21:36:50 | INFO    | Jabaquara: normal (chuva 0.5 mm, origem=simulado), sem alerta
+2026-11-17 21:36:50 | INFO    | Fim | processados=6 sucessos=6 falhas=2 alertas_novos=2 duplicados=0 enviados=2 pendentes=0 reenviados=0 sem_alerta=4
+2026-11-17 21:36:50 | INFO    | MODO SIMULADO: previsão de chuva lida de amostra local
+2026-11-17 21:36:50 | INFO    | Início da execução | canal=telegram | referência=2026-11-17T14:00
+2026-11-17 21:36:50 | INFO    | Telegram configurado (chat ***321)
+2026-11-17 21:36:50 | INFO    | Boletim CGE lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 21:36:50 | INFO    | Tabela Ouro lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 21:36:50 | INFO    | Leituras de sensor válidas: 0
+2026-11-17 21:36:50 | INFO    | Pinheiros: ALERTA ATENCAO gravado (chuva prevista 16.5 mm em 3h: atencao; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 21:36:50 | WARNING | envio alerta #1 falhou (tentativa 1/3): Telegram indisponível (URLError)
+2026-11-17 21:36:51 | WARNING | envio alerta #1 falhou (tentativa 2/3): Telegram indisponível (URLError)
+2026-11-17 21:36:51 | WARNING | envio alerta #1 falhou (tentativa 3/3): Telegram indisponível (URLError)
+2026-11-17 21:36:51 | ERROR   | Alerta #1 NÃO enviado, ficou pendente para a próxima execução: Telegram indisponível (URLError)
+2026-11-17 21:36:51 | INFO    | Lapa: ALERTA ATENCAO gravado (boletim CGE/Defesa Civil: atencao)
+2026-11-17 21:36:51 | WARNING | envio alerta #2 falhou (tentativa 1/3): Telegram indisponível (URLError)
+2026-11-17 21:36:51 | WARNING | envio alerta #2 falhou (tentativa 2/3): Telegram indisponível (URLError)
+2026-11-17 21:36:52 | WARNING | envio alerta #2 falhou (tentativa 3/3): Telegram indisponível (URLError)
+2026-11-17 21:36:52 | ERROR   | Alerta #2 NÃO enviado, ficou pendente para a próxima execução: Telegram indisponível (URLError)
+2026-11-17 21:36:52 | INFO    | Penha: ALERTA PERIGO gravado (chuva prevista 36 mm em 3h: perigo; boletim CGE/Defesa Civil: perigo; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 21:36:52 | WARNING | envio alerta #3 falhou (tentativa 1/3): Telegram indisponível (URLError)
+2026-11-17 21:36:52 | WARNING | envio alerta #3 falhou (tentativa 2/3): Telegram indisponível (URLError)
+2026-11-17 21:36:52 | WARNING | envio alerta #3 falhou (tentativa 3/3): Telegram indisponível (URLError)
+2026-11-17 21:36:52 | ERROR   | Alerta #3 NÃO enviado, ficou pendente para a próxima execução: Telegram indisponível (URLError)
+2026-11-17 21:36:52 | INFO    | Santo Amaro: normal (chuva 0 mm, origem=simulado), sem alerta
+2026-11-17 21:36:52 | INFO    | Itaim Paulista: normal (chuva 5 mm, origem=simulado), sem alerta
+2026-11-17 21:36:52 | INFO    | Jabaquara: normal (chuva 0.5 mm, origem=simulado), sem alerta
+2026-11-17 21:36:52 | INFO    | Fim | processados=6 sucessos=6 falhas=0 alertas_novos=3 duplicados=0 enviados=0 pendentes=3 reenviados=0 sem_alerta=3

@@ -1,0 +1,40 @@
+$ python run.py --agora 2026-11-17T14:00 --open-meteo-url http://127.0.0.1:9/   # API de clima fora do ar, sem cache
+2026-11-17 21:36:43 | INFO    | Início da execução | canal=simulado | referência=2026-11-17T14:00
+2026-11-17 21:36:43 | INFO    | Boletim CGE lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 21:36:43 | INFO    | Tabela Ouro lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 21:36:43 | INFO    | Leituras de sensor válidas: 0
+2026-11-17 21:36:43 | WARNING | chuva Pinheiros falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:43 | WARNING | chuva Pinheiros falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:43 | WARNING | chuva Pinheiros falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:43 | ERROR   | Falha na chuva de Pinheiros: sem dados de chuva para Pinheiros: Open-Meteo indisponível (URLError) (decidindo só com as outras fontes)
+2026-11-17 21:36:43 | INFO    | Pinheiros: ALERTA ATENCAO gravado (risco da tabela Ouro (Big Data): atencao)
+2026-11-17 21:36:43 | INFO    | Pinheiros: alerta enviado via simulado
+2026-11-17 21:36:43 | WARNING | chuva Lapa falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:44 | WARNING | chuva Lapa falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:44 | WARNING | chuva Lapa falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:44 | ERROR   | Falha na chuva de Lapa: sem dados de chuva para Lapa: Open-Meteo indisponível (URLError) (decidindo só com as outras fontes)
+2026-11-17 21:36:44 | INFO    | Lapa: ALERTA ATENCAO gravado (boletim CGE/Defesa Civil: atencao)
+2026-11-17 21:36:44 | INFO    | Lapa: alerta enviado via simulado
+2026-11-17 21:36:44 | WARNING | chuva Penha falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:44 | WARNING | chuva Penha falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:45 | WARNING | chuva Penha falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:45 | ERROR   | Falha na chuva de Penha: sem dados de chuva para Penha: Open-Meteo indisponível (URLError) (decidindo só com as outras fontes)
+2026-11-17 21:36:45 | INFO    | Penha: ALERTA PERIGO gravado (boletim CGE/Defesa Civil: perigo; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 21:36:45 | INFO    | Penha: alerta enviado via simulado
+2026-11-17 21:36:45 | WARNING | chuva Santo Amaro falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:45 | WARNING | chuva Santo Amaro falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:45 | WARNING | chuva Santo Amaro falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:45 | ERROR   | Falha na chuva de Santo Amaro: sem dados de chuva para Santo Amaro: Open-Meteo indisponível (URLError) (decidindo só com as outras fontes)
+2026-11-17 21:36:45 | INFO    | Santo Amaro: normal (chuva n/d, origem=indisponivel), sem alerta
+2026-11-17 21:36:45 | WARNING | chuva Itaim Paulista falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:46 | WARNING | chuva Itaim Paulista falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:46 | WARNING | chuva Itaim Paulista falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:46 | ERROR   | Falha na chuva de Itaim Paulista: sem dados de chuva para Itaim Paulista: Open-Meteo indisponível (URLError) (decidindo só com as outras fontes)
+2026-11-17 21:36:46 | INFO    | Itaim Paulista: normal (chuva n/d, origem=indisponivel), sem alerta
+2026-11-17 21:36:46 | WARNING | chuva Jabaquara falhou (tentativa 1/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:46 | WARNING | chuva Jabaquara falhou (tentativa 2/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:47 | WARNING | chuva Jabaquara falhou (tentativa 3/3): Open-Meteo indisponível (URLError)
+2026-11-17 21:36:47 | ERROR   | Falha na chuva de Jabaquara: sem dados de chuva para Jabaquara: Open-Meteo indisponível (URLError) (decidindo só com as outras fontes)
+2026-11-17 21:36:47 | INFO    | Jabaquara: normal (chuva n/d, origem=indisponivel), sem alerta
+2026-11-17 21:36:47 | INFO    | Fim | processados=6 sucessos=0 falhas=6 alertas_novos=3 duplicados=0 enviados=3 pendentes=0 reenviados=0 sem_alerta=3
+[codigo de saida: 2]

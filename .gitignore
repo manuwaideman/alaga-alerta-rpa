@@ -1,0 +1,8 @@
+# Segredos e estado local: NUNCA commitar
+.env
+*.env
+data/*
+!data/.gitkeep
+__pycache__/
+*.pyc
+*.db

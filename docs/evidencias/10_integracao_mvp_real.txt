@@ -1,0 +1,46 @@
+$ # API central do MVP rodando (repositório alaga-alerta; uvicorn local na porta 8010)
+$ # 1) ESP32 envia a leitura de perigo para a API central do MVP
+$ curl -X POST $MVP_URL/leituras -H "X-API-Key: ***" -d {"sensor_id":"ESP32-01","bairro_id":"jabaquara","nivel_cm":82,"classificacao":"perigo","medido_em":"2026-11-17T13:50:00-03:00"}
+{"id":1}
+
+$ # 2) Robô RPA com integração ativa (MVP_URL e MVP_API_KEY no ambiente)
+$ python run.py --simulado --agora 2026-11-17T14:00
+2026-11-17 19:46:50 | INFO    | MODO SIMULADO: previsão de chuva lida de amostra local
+2026-11-17 19:46:50 | INFO    | Integração com o MVP ativa: http://localhost:8010 (chave ***cao)
+2026-11-17 19:46:50 | INFO    | Início da execução | canal=simulado | referência=2026-11-17T14:00 | MVP=integrado
+2026-11-17 19:46:50 | INFO    | Boletim CGE lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 19:46:50 | INFO    | Tabela Ouro lido: 6 linhas, 0 inválidas, 0 duplicadas
+2026-11-17 19:46:50 | INFO    | Leituras de sensor recebidas do MVP: 1
+2026-11-17 19:46:50 | INFO    | Leituras de sensor válidas: 1
+2026-11-17 19:46:50 | INFO    | Pinheiros: ALERTA ATENCAO gravado (chuva prevista 16.5 mm em 3h: atencao; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 19:46:50 | INFO    | Pinheiros: alerta enviado via simulado
+2026-11-17 19:46:50 | INFO    | Pinheiros: alerta #1 publicado no MVP (id 105)
+2026-11-17 19:46:50 | INFO    | Lapa: ALERTA ATENCAO gravado (boletim CGE/Defesa Civil: atencao)
+2026-11-17 19:46:50 | INFO    | Lapa: alerta enviado via simulado
+2026-11-17 19:46:50 | INFO    | Lapa: alerta #2 publicado no MVP (id 106)
+2026-11-17 19:46:50 | INFO    | Penha: ALERTA PERIGO gravado (chuva prevista 36 mm em 3h: perigo; boletim CGE/Defesa Civil: perigo; risco da tabela Ouro (Big Data): atencao)
+2026-11-17 19:46:50 | INFO    | Penha: alerta enviado via simulado
+2026-11-17 19:46:50 | INFO    | Penha: alerta #3 publicado no MVP (id 107)
+2026-11-17 19:46:50 | INFO    | Santo Amaro: normal (chuva 0 mm, origem=simulado), sem alerta
+2026-11-17 19:46:50 | INFO    | Itaim Paulista: normal (chuva 5 mm, origem=simulado), sem alerta
+2026-11-17 19:46:50 | INFO    | Jabaquara: ALERTA PERIGO gravado (sensor de nível de água (robô): perigo)
+2026-11-17 19:46:50 | INFO    | Jabaquara: alerta enviado via simulado
+2026-11-17 19:46:50 | INFO    | Jabaquara: alerta #4 publicado no MVP (id 108)
+2026-11-17 19:46:50 | INFO    | Fim | processados=6 sucessos=6 falhas=0 alertas_novos=4 duplicados=0 enviados=4 pendentes=0 reenviados=0 sem_alerta=2 publicados_mvp=4 publicacao_pendente=0
+(código de saída: 0)
+
+$ # 3) O que o site do MVP lê: GET /alertas?ativos=true
+Pinheiros  | atencao | origem=rpa | Atenção de alagamento em Pinheiros. Motivo: chuva prevista 16.5 mm em 3h: atenção; risco da tabela Ouro (Big Data): atenção. Evite ruas que costumam alagar e acompanhe os avisos.
+Lapa       | atencao | origem=rpa | Atenção de alagamento em Lapa. Motivo: boletim CGE/Defesa Civil: atenção. Evite ruas que costumam alagar e acompanhe os avisos.
+Penha      | alto    | origem=rpa | Risco alto de alagamento em Penha. Motivo: chuva prevista 36 mm em 3h: perigo; boletim CGE/Defesa Civil: perigo; risco da tabela Ouro (Big Data): atenção. Evite sair e nunca atravesse rua alagada. Emergência: Defesa Civil 199.
+Jabaquara  | alto    | origem=rpa | Risco alto de alagamento em Jabaquara. Motivo: sensor de nível de água (robô): perigo. Evite sair e nunca atravesse rua alagada. Emergência: Defesa Civil 199.
+
+$ # 4) Mapa do MVP (GET /risco/agora) já reflete os alertas do robô
+Jabaquara    alto     Alerta emitido pela automação: risco alto
+Lapa         atencao  Alerta emitido pela automação: risco de atenção
+Penha        alto     Alerta emitido pela automação: risco alto
+Pinheiros    atencao  Alerta emitido pela automação: risco de atenção
+
+$ # 5) Mesma execução de novo: nada duplica no robô nem no MVP
+2026-11-17 19:46:50 | INFO    | Fim | processados=6 sucessos=6 falhas=0 alertas_novos=0 duplicados=4 enviados=0 pendentes=0 reenviados=0 sem_alerta=2 publicados_mvp=0 publicacao_pendente=0
+alertas ativos no MVP: 4

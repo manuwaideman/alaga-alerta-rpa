@@ -1,0 +1,42 @@
+test_env_preenche_sem_sobrescrever_o_ambiente (test_integracao_mvp.TestArquivoEnv.test_env_preenche_sem_sobrescrever_o_ambiente) ... ok
+test_alerta_e_publicado_no_contrato_do_mvp (test_integracao_mvp.TestIntegracaoMVP.test_alerta_e_publicado_no_contrato_do_mvp) ... ok
+test_bairro_fora_do_mvp_e_recusado (test_integracao_mvp.TestIntegracaoMVP.test_bairro_fora_do_mvp_e_recusado) ... ok
+test_chave_recusada_vira_erro_sem_vazar_a_chave (test_integracao_mvp.TestIntegracaoMVP.test_chave_recusada_vira_erro_sem_vazar_a_chave) ... ok
+test_leitura_de_perigo_vinda_do_mvp_dispara_alerta (test_integracao_mvp.TestIntegracaoMVP.test_leitura_de_perigo_vinda_do_mvp_dispara_alerta) ... ok
+test_leituras_do_mvp_indisponiveis_nao_derrubam_o_robo (test_integracao_mvp.TestIntegracaoMVP.test_leituras_do_mvp_indisponiveis_nao_derrubam_o_robo) ... ok
+test_mensagem_em_linguagem_simples (test_integracao_mvp.TestIntegracaoMVP.test_mensagem_em_linguagem_simples) ... ok
+test_mvp_fora_do_ar_fica_pendente_e_e_republicado (test_integracao_mvp.TestIntegracaoMVP.test_mvp_fora_do_ar_fica_pendente_e_e_republicado) ... ok
+test_sem_mvp_comportamento_original (test_integracao_mvp.TestIntegracaoMVP.test_sem_mvp_comportamento_original) ... ok
+test_banco_antigo_ganha_colunas_novas (test_integracao_mvp.TestMigracao.test_banco_antigo_ganha_colunas_novas) ... ok
+test_boletim_de_ontem_nao_gera_alerta (test_integracao_mvp.TestValidadeDosDados.test_boletim_de_ontem_nao_gera_alerta) ... ok
+test_boletim_recente_continua_valendo (test_integracao_mvp.TestValidadeDosDados.test_boletim_recente_continua_valendo) ... ok
+test_ouro_de_outro_horario_e_ignorada (test_integracao_mvp.TestValidadeDosDados.test_ouro_de_outro_horario_e_ignorada) ... ok
+test_boletim_eleva_risco (test_rpa.TestDecisao.test_boletim_eleva_risco) ... ok
+test_leitura_velha_e_ignorada (test_rpa.TestDecisao.test_leitura_velha_e_ignorada) ... ok
+test_limiares_da_chuva (test_rpa.TestDecisao.test_limiares_da_chuva) ... ok
+test_sensor_perigo_dispara_alerta_mesmo_sem_chuva (test_rpa.TestDecisao.test_sensor_perigo_dispara_alerta_mesmo_sem_chuva) ... ok
+test_tudo_normal_nao_alerta (test_rpa.TestDecisao.test_tudo_normal_nao_alerta) ... ok
+test_vale_o_maior_nivel_entre_as_fontes (test_rpa.TestDecisao.test_vale_o_maior_nivel_entre_as_fontes) ... ok
+test_api_fora_sem_cache_registra_falha_e_continua (test_rpa.TestFalhas.test_api_fora_sem_cache_registra_falha_e_continua) ... ok
+test_api_fora_usa_cache_valido (test_rpa.TestFalhas.test_api_fora_usa_cache_valido) ... ok
+test_arquivo_ausente_nao_derruba_o_robo (test_rpa.TestFalhas.test_arquivo_ausente_nao_derruba_o_robo) ... ok
+test_arquivo_invalido_e_registrado_como_erro (test_rpa.TestFalhas.test_arquivo_invalido_e_registrado_como_erro) ... ok
+test_cache_vencido_nao_e_usado (test_rpa.TestFalhas.test_cache_vencido_nao_e_usado) ... ok
+test_dados_duplicados_nao_duplicam_alerta (test_rpa.TestFalhas.test_dados_duplicados_nao_duplicam_alerta) ... ok
+test_envio_falha_fica_pendente_e_e_reenviado (test_rpa.TestFalhas.test_envio_falha_fica_pendente_e_e_reenviado) ... ok
+test_linhas_invalidas_e_duplicadas_do_csv (test_rpa.TestFalhas.test_linhas_invalidas_e_duplicadas_do_csv) ... ok
+test_log_nao_vaza_segredos (test_rpa.TestFalhas.test_log_nao_vaza_segredos) ... ok
+test_modo_simulado_sem_credenciais (test_rpa.TestFalhas.test_modo_simulado_sem_credenciais) ... ok
+test_notificador_nao_expoe_token_no_erro (test_rpa.TestFalhas.test_notificador_nao_expoe_token_no_erro) ... ok
+test_open_meteo_inacessivel_vira_erro_coleta (test_rpa.TestFalhas.test_open_meteo_inacessivel_vira_erro_coleta) ... ok
+test_retry_ate_funcionar (test_rpa.TestFalhas.test_retry_ate_funcionar) ... ok
+test_retry_esgotado_relanca_erro (test_rpa.TestFalhas.test_retry_esgotado_relanca_erro) ... ok
+test_leitura_entra_pela_api_e_alerta_sai_pela_api (test_rpa.TestIntegracaoAPI.test_leitura_entra_pela_api_e_alerta_sai_pela_api) ... ok
+test_chuva_forte_gera_alerta_perigo_enviado (test_rpa.TestSucesso.test_chuva_forte_gera_alerta_perigo_enviado) ... ok
+test_leitura_csv_boletim_valida (test_rpa.TestSucesso.test_leitura_csv_boletim_valida) ... ok
+test_open_meteo_soma_janela (test_rpa.TestSucesso.test_open_meteo_soma_janela) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 0.619s
+
+OK
