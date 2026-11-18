@@ -21,7 +21,7 @@ Robô em **Python** (apenas biblioteca padrão) que monitora a chuva prevista po
 | Fontes de dados | Open-Meteo, boletins CGE/Defesa Civil, tabela Ouro (Big Data), leituras do ESP32 |
 | ODS conectados | 11 (cidades sustentáveis) e 13 (ação climática); secundários: 3 e 9 |
 | URL do MVP / repositório principal | (https://alaga-alerta-mvp.onrender.com/) |
-| Vídeo demonstrativo | [preencher] |
+| Vídeo demonstrativo | https://youtu.be/EuzVpNb7ozc?is=FKpogUGYXlgFWBHJ |
 
 ## Como rodar (3 comandos, nada a instalar)
 Requer Python 3.10 ou superior.
