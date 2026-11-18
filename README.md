@@ -20,7 +20,7 @@ Robô em **Python** (apenas biblioteca padrão) que monitora a chuva prevista po
 | Papel do RPA | Monitorar, decidir e alertar automaticamente, a cada 30 min, sem operação manual |
 | Fontes de dados | Open-Meteo, boletins CGE/Defesa Civil, tabela Ouro (Big Data), leituras do ESP32 |
 | ODS conectados | 11 (cidades sustentáveis) e 13 (ação climática); secundários: 3 e 9 |
-| URL do MVP / repositório principal | [preencher] |
+| URL do MVP / repositório principal | (https://alaga-alerta-mvp.onrender.com/) |
 | Vídeo demonstrativo | [preencher] |
 
 ## Como rodar (3 comandos, nada a instalar)
